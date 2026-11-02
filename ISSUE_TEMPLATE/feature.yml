@@ -1,0 +1,35 @@
+name: Feature
+description: A new capability in a product
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What and why
+      description: The outcome first, then the reason. One paragraph.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context links
+      description: Documents, issues, designs or files someone needs to read first.
+      placeholder: |
+        - docs/gdd.md
+        - #12
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      description: Checkable statements. An agent will treat these as the acceptance test.
+      placeholder: |
+        - [ ] ...
+        - [ ] `uv run invoke check` passes
+    validations:
+      required: true
+  - type: checkboxes
+    id: agent
+    attributes:
+      label: Hand-off
+      options:
+        - label: This is fully specified and an agent can take it (add the `agent-ready` label)

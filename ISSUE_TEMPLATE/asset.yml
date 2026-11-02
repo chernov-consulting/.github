@@ -1,0 +1,32 @@
+name: Asset
+description: Art, audio, copy or other content
+labels: ["type:asset"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What is needed
+      description: The asset, where it is used, and the format and size it must have.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context links
+      description: References, style notes, source files, the artist or contractor involved.
+  - type: input
+    id: rights
+    attributes:
+      label: Rights
+      description: Who owns it and under what licence. Anything not owned by Chernov Consulting OÜ in writing must be flagged here.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      placeholder: |
+        - [ ] File committed under art/ (originals untouched; a new pass is a new file)
+        - [ ] `uv run invoke assets.inventory` run
+    validations:
+      required: true

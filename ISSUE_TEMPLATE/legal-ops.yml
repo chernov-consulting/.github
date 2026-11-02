@@ -1,0 +1,34 @@
+name: Legal / ops
+description: Company, store accounts, legal pages, policies, accounting
+labels: ["type:legal-ops"]
+body:
+  - type: dropdown
+    id: who
+    attributes:
+      label: Who has to do it
+      description: Steps that need Anton's identity (e-ID, signatures, store verification, bank) are his. Drafting around them can go to an agent.
+      options:
+        - Anton (needs his identity or signature)
+        - Accountant
+        - Agent drafts, Anton reviews
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Step
+      description: What has to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context links
+      description: The relevant step in legal/chernov-consulting-setup.md, forms, portals.
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      description: How we know it is finished, and which document records the result.
+    validations:
+      required: true

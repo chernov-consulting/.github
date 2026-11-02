@@ -1,0 +1,26 @@
+name: Research
+description: Find something out. The output is a document or a decision.
+labels: ["type:research"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What do we need to know, and what decision does it feed?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context links
+      description: What has already been found, and where.
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      description: The document or decision that closes this issue, and where it lives.
+      placeholder: |
+        - [ ] Findings written to docs/...
+        - [ ] Unverified claims are marked as unverified
+    validations:
+      required: true
